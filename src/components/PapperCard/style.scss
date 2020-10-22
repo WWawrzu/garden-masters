@@ -1,0 +1,70 @@
+@import "../../styles/imports";
+.PapperCard {
+    box-shadow: 5px 5px 10px #c2c2c2;
+    max-width: 750px;
+    margin: 0 auto;
+    border-radius: 12px;
+    background-color: $white;
+    @media (max-width: $small) {
+        box-shadow: none;
+        border-radius: none;
+    }
+    @media (max-width: $medium) {
+        width: 100%;
+        max-width: 100%;
+    }
+    h2 {
+        font-family: "Arya", sans-serif;
+        font-size: 40px;
+        padding: 20px 30px;
+        text-align: center;
+        color: $secondary;
+        @media (max-width: $large) {
+            font-size: 35px;
+            text-align: left;
+        }
+        @media (max-width: $medium) {
+            padding: 20px;
+        }
+    }
+    .liContainer {
+        list-style-type: none;
+        list-style-position: outside;
+
+        .container {
+            min-height: 100vh;
+            padding-top: $bar;
+            padding-left: 20px;
+            padding-right: 20px;
+            @media (max-width: $medium) {
+                padding-top: 0;
+                margin-top: 50px;
+                min-height: auto;
+            }
+        }
+    }
+    .liElement {
+        padding: 15px 30px;
+        // display: ;
+        border-bottom: 1px solid #c0c0c0;
+        &:last-of-type {
+            border: none;
+        }
+        @media (max-width: $medium) {
+            padding: 10px 20px;
+        }
+        @media (max-width: $small) {
+            &:last-of-type {
+                border-bottom: 1px solid #c0c0c0;
+            }
+            &:first-of-type {
+                border-top: 1px solid #c0c0c0;
+            }
+        }
+    }
+    a {
+        color: $secondary;
+        text-decoration: none;
+        font-weight: bolder;
+    }
+}

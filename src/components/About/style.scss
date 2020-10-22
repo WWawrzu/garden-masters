@@ -1,0 +1,369 @@
+@import "../../styles/imports";
+// @import "./scroll";
+// body::-webkit-scrollbar {
+//     // display: none;
+// }
+#fp-nav ul li a span {
+    background: $secondary !important;
+}
+.About {
+    h1 {
+        margin: 0;
+    }
+    header {
+        img {
+            width: 30%;
+            min-width: 300px;
+        }
+        .scroll {
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            cursor: pointer;
+        }
+        .icon {
+            color: $primary;
+            opacity: 0.3;
+            font-size: 70px;
+        }
+    }
+    .container {
+        min-height: 100vh;
+        padding-top: $bar;
+        padding-left: 20px;
+        padding-right: 20px;
+        @media (max-width: $medium) {
+            padding-top: 0;
+            margin-top: 50px;
+            min-height: auto;
+        }
+    }
+    .bg {
+        @media (min-width: $large) {
+            background-image: url("../../assets/bgStriped.png");
+            // background-size: 100%;
+            background-size: cover;
+        }
+    }
+    .MainAbout {
+        max-width: 1100px;
+        margin: 0 auto;
+
+        .bold {
+            font-weight: bold;
+        }
+        img {
+            max-width: 100%;
+            width: 400px;
+            margin: 60px auto 60px;
+            display: block;
+        }
+        .logo {
+            margin: 0 auto;
+        }
+        ul {
+            // list-style-type: none;
+            list-style-position: inside;
+            list-style-type: "– ";
+            padding: 0;
+        }
+    }
+    .MainSlider {
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding-top: 0;
+        @media (max-width: $large) {
+            background-image: none;
+            padding: 0;
+            min-height: auto;
+            padding-bottom: 150px;
+        }
+        .fpControlArrow {
+            position: absolute;
+            z-index: 1000;
+            font-size: 80px;
+            top: 50%;
+            transform: translate(0, -50%);
+            color: rgba($black, 0.3);
+            transition: all 0.1s ease-in-out;
+            cursor: pointer;
+            &:hover {
+                color: rgba($secondary, 1);
+            }
+            &.right {
+                right: 55px;
+            }
+            &.left {
+                left: 55px;
+            }
+            @media (max-width: $large) {
+                bottom: 70px;
+                top: auto;
+                transform: translate(0, 0);
+            }
+            @media (max-width: $small) {
+                font-size: 50px;
+                bottom: 100px;
+            }
+        }
+
+        .Slide {
+            @media (max-width: $large) {
+            }
+            .onlyImage {
+                box-shadow: 10px 10px 13px rgba(#000000, 0.25);
+                margin: 20px auto;
+            }
+            .grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                // grid-gap: 50px;
+                // padding: 0 120px;
+                width: 100%;
+                max-width: 1500px;
+                margin: 20px auto;
+                box-shadow: 10px 10px 13px rgba(#000000, 0.25);
+                background-color: $white;
+                @media (max-width: $large) {
+                    font-size: 40px;
+                    box-shadow: none;
+                    background-image: url("../../assets/bgStriped.png");
+                }
+
+                @media (max-width: $large) {
+                    display: block;
+                    background-image: none;
+                    box-shadow: 10px 10px 13px rgba(#000000, 0.25);
+                    margin: 20px auto;
+                    height: auto;
+                    width: auto;
+                }
+            }
+            display: flex;
+            align-items: center;
+            .imageWrapper {
+            }
+            img {
+                height: auto;
+                display: block;
+                width: 100%;
+                max-height: 70vh;
+                width: auto;
+                // min-width: 100% !important;
+                // max-width: 100% !important;
+                // height: 100%;
+                // max-height: 100%;
+            }
+            .textContent {
+                padding: 40px 70px;
+                // display: flex;
+                overflow: hidden;
+                align-items: center;
+                @media (max-width: $large) {
+                    font-size: 16px;
+                    padding: 10px 30px;
+                    display: none;
+                }
+                @media (max-width: $medium) {
+                }
+                .innerTextContent {
+                    grid-template-columns: 1fr;
+                    display: grid;
+                    grid-template-rows: 0.5fr 2fr 0.5fr;
+                    height: 100%;
+                    @media (max-width: $medium) {
+                        display: block;
+                    }
+                    p {
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+                h2 {
+                    color: $secondary;
+                    // font-family: "Arya", sans-serif;
+                    font-size: 60px;
+                    margin: 0;
+                    margin-bottom: 40px;
+
+                    text-transform: uppercase;
+                    @media (max-width: $large) {
+                        margin-bottom: 10px;
+                        font-size: 40px;
+                    }
+                    @media (max-width: $medium) {
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+        .fp-slidesNav {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+            // left: 50% !important;
+            // transform: translate(-50%, 0) !important;
+            // right: auto;
+        }
+        .fp-slidesNav ul li a span {
+            background: $secondary !important;
+        }
+    }
+
+    .MainSocial {
+        .instaHeader {
+            text-align: center;
+            @media (max-width: $medium) {
+                line-height: 1;
+                margin-bottom: 40px;
+            }
+        }
+        .insta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 100vw;
+
+            .instaFlex {
+                overflow: hidden;
+                max-width: 90vw;
+                display: grid;
+                grid-template-columns: auto auto auto auto auto;
+                animation: displayOp 0s 2s forwards;
+                visibility: hidden;
+            }
+            @keyframes displayOp {
+                to {
+                    visibility: visible;
+                }
+            }
+        }
+        a {
+            display: block;
+        }
+        .instaWrapper {
+            position: relative;
+            @media (max-width: $large) {
+                &:nth-of-type(n + 3) {
+                    display: none;
+                }
+            }
+            @media (max-width: $medium) {
+                &:nth-of-type(n + 2) {
+                    display: none;
+                }
+            }
+        }
+        .layer {
+            display: block;
+            background-color: black;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            opacity: 0;
+            cursor: pointer;
+        }
+        .socialLinks {
+            font-size: 50px;
+            display: flex;
+            justify-content: center;
+
+            .fb,
+            .ig,
+            .pin {
+                margin: 0 20px;
+            }
+            .ig {
+                color: #f56040;
+            }
+            .fb {
+                color: #385dd6;
+            }
+            .pin {
+                color: #f92d28;
+            }
+            margin-bottom: 60px;
+        }
+    }
+
+    // .MobileSlider {
+    //     // height: 100%;
+    //     // display: grid;
+    //     h1 {
+    //         @media (max-width: $large) {
+    //             display: none;
+    //         }
+    //     }
+    //     .sliderContainer {
+    //         display: flex;
+    //         align-items: center;
+    //         justify-content: center;
+    //         flex-wrap: wrap;
+    //         height: 100%;
+    //     }
+    //     .sliderBox {
+    //         // max-width: 1500px;
+    //         width: 100%;
+    //         padding: 0 100px;
+    //         @media (max-width: $medium) {
+    //             padding: 0;
+    //         }
+    //     }
+    //     .flexBox {
+    //         position: relative;
+    //     }
+    //     .buttonBack,
+    //     .buttonNext {
+    //         display: block;
+    //         position: absolute;
+    //         top: 50%;
+    //         transform: translate(0, -50%);
+    //         font-size: 80px;
+    //         font-weight: lighter;
+    //         color: rgba($black, 0.3);
+    //         transition: all 0.1s ease-in-out;
+    //         z-index: 100;
+    //         @media (max-width: $large) {
+    //             font-size: 60px;
+    //             color: rgba($black, 0.5);
+    //         }
+    //         @media (max-width: $small) {
+    //             font-size: 60px;
+    //             color: rgba($black, 0.7);
+    //         }
+    //         &:hover {
+    //             color: rgba($secondary, 1);
+    //         }
+    //     }
+    //     $buttonOfset: -100px;
+    //     $buttonOfset-m: -60px;
+    //     $buttonOfset-s: 10px;
+    //     .buttonBack {
+    //         left: $buttonOfset;
+    //         @media (max-width: $large) {
+    //             left: $buttonOfset-m;
+    //         }
+    //         @media (max-width: $small) {
+    //             left: $buttonOfset-s;
+    //         }
+    //     }
+    //     .buttonNext {
+    //         right: $buttonOfset;
+    //         @media (max-width: $large) {
+    //             right: $buttonOfset-m;
+    //         }
+    //         @media (max-width: $small) {
+    //             right: $buttonOfset-s;
+    //         }
+    //     }
+    //     .imageSlide {
+    //         // padding: 20px;
+    //         .imgSlide {
+    //             box-shadow: 10px 10px 13px rgba(#000000, 0.25);
+    //         }
+    //     }
+    // }
+}

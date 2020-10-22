@@ -1,0 +1,192 @@
+@import "../../styles/imports";
+// @import "./scroll";
+// body::-webkit-scrollbar {
+//     // display: none;
+// }
+.GreenInteriors {
+    .bgNR {
+        background-image: url("../../assets/bgStriped.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        @media (max-width: $small) {
+            background-image: none !important;
+        }
+    }
+    h1 {
+        margin: 0;
+    }
+    header {
+        .heroFill {
+            background: rgb(0, 0, 0);
+            background: linear-gradient(
+                110deg,
+                rgba(0, 0, 0, 1) 0%,
+                rgba(0, 0, 0, 0.8) 50%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            @media (max-width: $large) {
+                // background-color:
+                background: linear-gradient(
+                    rgba(0, 0, 0, 0.9) 0%,
+                    rgba(0, 0, 0, 0.8) 100%
+                );
+            }
+
+            width: 100vw;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            @media (max-width: $large) {
+                justify-content: center;
+            }
+        }
+        .wwd {
+            max-width: 800px;
+            margin-left: 100px;
+            @media (max-width: $large) {
+                margin-left: 0;
+                padding: 30px;
+            }
+            p {
+                color: $white;
+                font-family: "Arya", sans-serif;
+                font-size: 32px;
+                // line-height: 1.5;
+                margin: 0;
+                @media (max-width: $small) {
+                    font-size: 18px;
+                }
+            }
+        }
+        h2 {
+            color: $secondary;
+            font-family: "Arya", sans-serif;
+            font-size: 50px;
+            margin: 0;
+            margin-bottom: 30px;
+            line-height: 1.1;
+            text-transform: uppercase;
+            @media (max-width: $large) {
+                font-size: 50px;
+            }
+            @media (max-width: $medium) {
+                font-size: 50px;
+            }
+            @media (max-width: $small) {
+                font-size: 30px;
+            }
+        }
+        .scroll {
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            cursor: pointer;
+        }
+        .icon {
+            color: $secondary;
+            // opacity: 1;
+            font-size: 70px;
+        }
+    }
+    .container {
+        min-height: 100vh;
+        // height: auto;
+        padding-top: $bar;
+        padding-left: 20px;
+        padding-right: 20px;
+        // padding: 200px 0;
+        @media (max-width: $medium) {
+            // padding-top: 0;
+            margin-top: 50px;
+            min-height: auto;
+        }
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 1500px;
+        margin: 0 auto;
+        // height: 100vh;
+        align-items: center;
+        padding: 100px 0;
+        // gap: 50px;
+        @media (max-width: 1500px) {
+            grid-template-columns: 1fr;
+        }
+    }
+    .PapperCard {
+        max-width: 620px !important;
+    }
+
+    $arrowSize: 60px;
+    $buttonOfset: -60px;
+    @media (max-width: $large) {
+        $buttonOfset: -60px;
+    }
+
+    .sliderGreen {
+        padding: $arrowSize - $buttonOfset/2;
+        // max-height: 70vh;
+        // width: auto;
+        max-width: 800px;
+        margin: 0 auto;
+        @media (max-width: $large) {
+            margin-top: 100px;
+            padding: 40px;
+        }
+        @media (max-width: $small) {
+            margin-top: 100px;
+            padding: 0px;
+        }
+    }
+    .flexBox {
+        box-shadow: 5px 5px 10px #c2c2c2;
+        position: relative;
+    }
+    .buttonBack,
+    .buttonNext {
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        font-size: $arrowSize;
+        font-weight: lighter;
+        color: rgba($black, 0.3);
+        transition: all 0.1s ease-in-out;
+        z-index: 100;
+        @media (max-width: $large) {
+            // text-shadow: 10px 10px 6px #000000;
+            filter: drop-shadow(5px 5px 5px#000000);
+            font-size: 80px;
+            color: rgba($white, 1);
+        }
+        @media (max-width: $small) {
+            font-size: 80px;
+            color: rgba($white, 1);
+        }
+        // mix-blend-mode: difference;
+        &:hover {
+            color: rgba($secondary, 1);
+        }
+    }
+
+    .buttonBack {
+        left: $buttonOfset;
+        @media (max-width: $small) {
+            left: 10px;
+        }
+    }
+    .buttonNext {
+        right: $buttonOfset;
+        @media (max-width: $small) {
+            right: 10px;
+        }
+    }
+    .imageSlide {
+        // padding: 20px;
+        .imgSlide {
+            box-shadow: 10px 10px 13px rgba(#000000, 0.25);
+        }
+    }
+}

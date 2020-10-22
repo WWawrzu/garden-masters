@@ -1,0 +1,171 @@
+@import "../../styles/imports";
+.bgNR {
+    background-image: url("../../assets/bgStriped.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    @media (max-width: $small) {
+        background-image: none !important;
+    }
+}
+.bg {
+    background-image: url("../../assets/bgStriped.png");
+    background-size: cover;
+    @media (max-width: $small) {
+        background-image: none !important;
+    }
+}
+.Realizations {
+    // min-height: 100vh;
+    // display: flex;
+    // flex-direction: column;
+    .flex {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 1050px;
+        margin: 0 auto;
+    }
+    .grid {
+        // padding-top: $bar;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        @media (max-width: $small) {
+            // padding-top: $bar-s;
+            margin-top: $bar;
+            margin-bottom: $bar;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+
+            // max-width: 100;
+        }
+        .tiles {
+            position: relative;
+            height: 100%;
+            padding: 15px;
+            cursor: pointer;
+
+            &:hover {
+                h2 {
+                    transform: scale(1.1);
+                }
+            }
+            @media (max-width: $small) {
+                padding: 5px 10px;
+            }
+        }
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            box-shadow: 10px 10px 20px rgba(#000, 0.4);
+            // position: absolute;
+            @media (max-width: $small) {
+                box-shadow: none;
+            }
+        }
+        .title {
+            width: 100%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            text-shadow: 0px 3px 6px #000000;
+            color: $white;
+
+            h2 {
+                transition: transform 0.1s ease-in-out;
+                font-size: 40px;
+                text-transform: uppercase;
+                text-align: center;
+                @media (max-width: $large) {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}
+
+.sub {
+    h1.withoutSub {
+        padding-bottom: 80px;
+        @media (max-width: $small) {
+            padding: 0 20px 40px;
+        }
+    }
+    h1 {
+        margin: 0;
+        line-height: 1;
+        @media (max-width: $small) {
+            padding: 0 20px;
+            font-size: 45px;
+        }
+    }
+    h2 {
+        line-height: 1 !important;
+        @media (max-width: $small) {
+            font-size: 28px !important;
+        }
+    }
+    p {
+        margin-bottom: 50px;
+        font-size: 24px;
+        font-style: italic;
+        color: #ababab;
+        @media (max-width: $large) {
+            font-size: 18px;
+        }
+        @media (max-width: $small) {
+            padding: 0 20px;
+        }
+    }
+    .conCenter {
+        margin: 0 auto;
+        max-width: 750px;
+    }
+    .conSub {
+        min-height: 100vh;
+        padding-top: 120px;
+        padding-bottom: 100px;
+        @media (max-width: $medium) {
+            padding-top: 0;
+            padding-left: 0;
+            padding-right: 0;
+            padding-top: 80px;
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+    .conBig {
+        max-width: 1550px;
+        margin: 0 auto;
+        @media (max-width: 1550px) {
+            max-width: 750px;
+        }
+        @media (max-width: $medium) {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+    .twoColumns {
+        @media (min-width: 1550px) {
+            padding-bottom: 20px;
+            column-count: 2;
+            // break-inside: avoid-column;
+            * {
+                -webkit-column-break-inside: avoid;
+                page-break-inside: avoid;
+                break-inside: avoid;
+                break-inside: avoid-column;
+            }
+            h2 {
+                margin-top: 0;
+                font-size: 30px;
+            }
+            .PapperCard {
+                margin-bottom: 40px;
+            }
+        }
+    }
+}

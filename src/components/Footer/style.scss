@@ -1,0 +1,43 @@
+@import "../../styles/imports";
+
+.Footer {
+    background-color: $primary;
+    padding: 80px 0 60px;
+    color: #5b6a63;
+    .wrapper {
+        margin: 0 auto;
+        max-width: 1100px;
+    }
+    .flexContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-content: space-between;
+        margin-bottom: 60px;
+        // grid-gap: 20px;
+        @media (max-width: $medium) {
+            grid-template-columns: 1fr 1fr;
+        }
+        @media (max-width: $small) {
+            grid-template-columns: 1fr;
+        }
+    }
+    .block {
+        // width: 300px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .socialLinks {
+        font-size: 48px;
+        display: flex;
+        justify-content: center;
+        svg {
+            margin: 0 20px;
+        }
+    }
+    .lines {
+        margin-top: 70px;
+        height: 20px;
+        border-top: 3px solid $secondary;
+        border-bottom: 6px solid $secondary;
+    }
+}

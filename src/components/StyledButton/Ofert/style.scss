@@ -1,0 +1,19 @@
+@import "../../../styles/imports";
+
+.StyledButton {
+    display: inline-block;
+    // max-width: 200px;
+    background-color: $secondary;
+    padding: 10px 25px;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 7px;
+    color: $white;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    .flex {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+}
