@@ -46,9 +46,11 @@
             padding: 15px;
             cursor: pointer;
 
-            &:hover {
-                h2 {
-                    transform: scale(1.1);
+            @media (min-width: $large) {
+                &:hover {
+                    h2 {
+                        transform: scale(1.1);
+                    }
                 }
             }
             @media (max-width: $small) {

@@ -12,6 +12,23 @@ class MainSlider extends Component {
         const fullpageApi = this.props.fullpageApi;
         const slides = this.props.slides;
 
+        const imagesSlider = [
+            require("../../assets/main/slider/propper-sized/1.jpg"),
+            require("../../assets/main/slider/propper-sized/2.jpg"),
+            require("../../assets/main/slider/propper-sized/3.jpg"),
+            require("../../assets/main/slider/propper-sized/4.jpg"),
+            require("../../assets/main/slider/propper-sized/5.jpg"),
+            require("../../assets/main/slider/propper-sized/6.jpg"),
+            require("../../assets/main/slider/propper-sized/7.jpg"),
+            require("../../assets/main/slider/propper-sized/8.jpg"),
+            require("../../assets/main/slider/propper-sized/9.jpg"),
+            require("../../assets/main/slider/propper-sized/10.jpg"),
+            require("../../assets/main/slider/propper-sized/11.jpg"),
+            require("../../assets/main/slider/propper-sized/12.jpg"),
+            require("../../assets/main/slider/propper-sized/13.jpg"),
+            require("../../assets/main/slider/propper-sized/14.jpg"),
+        ];
+
         return (
             <div className="container bg MainSlider fp-auto-height section fp-auto-height-responsive">
                 <FontAwesomeIcon
@@ -28,12 +45,12 @@ class MainSlider extends Component {
                     icon={faChevronRight}
                     className="fpControlArrow right"
                 />
-                {slides.map((slide) => (
+                {imagesSlider.map((slide) => (
                     <Slide
-                        key={slide.title}
-                        description={slide.description}
-                        title={slide.title}
-                        img={`http://localhost:1337${slide.image.url}`}
+                        // key={slide.title}
+                        // description={slide.description}
+                        // title={slide.title}
+                        img={slide}
                     />
                 ))}
             </div>
