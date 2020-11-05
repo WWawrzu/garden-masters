@@ -7,9 +7,13 @@ function PapperCard({ elements, title }) {
             {title ? <h2>{title}</h2> : null}
             <div className="liContainer">
                 {elements.map((element) => (
-                    <div className="liElement">
+                    <div className="liElement" key={element.id}>
                         {element.href ? (
-                            <a href={`http://${element.href}`} target="_blank">
+                            <a
+                                href={`http://${element.href}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
                                 {element.label}
                             </a>
                         ) : (

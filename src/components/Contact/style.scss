@@ -45,9 +45,13 @@
     .mapContainer {
         height: 80%;
         width: 100%;
+        background-image: url("../../assets/mapa.jpg");
+        background-size: cover;
+        background-position: center;
         @media (max-width: $large) {
             height: 60vh;
         }
+        box-shadow: 3px 5px 20px rgba(#000000, 0.3);
     }
     p,
     h2,

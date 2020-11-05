@@ -1,6 +1,4 @@
 import React from "react";
-
-// import Slider from "react-slick";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faChevronLeft,
@@ -15,40 +13,38 @@ import {
     Image,
 } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
+import "./style.scss";
 
 function StyledSlider({ slides }) {
-    function importAll(r) {
-        return r.keys().map(r);
-    }
-    const imagesSlider = importAll(
-        require.context(
-            "../../assets/GreenInteriors/slider",
-            false,
-            /\.(png|jpe?g|svg)$/,
-        ),
-    );
+    // function importAll(r) {
+    //     return r.keys().map(r);
+    // }
+    // const imagesSlider = importAll(
+    //     require.context(
+    //         "../../assets/GreenInteriors/slider",
+    //         false,
+    //         /\.(png|jpe?g|svg)$/,
+    //     ),
+    // );
     return (
-        <div className="sliderGreen">
+        <div className="StyledSlider">
             <CarouselProvider
-                naturalSlideWidth={4}
-                naturalSlideHeight={3}
-                totalSlides={imagesSlider.length}
+                naturalSlideWidth={16}
+                naturalSlideHeight={9}
+                totalSlides={slides.length}
                 step={1}
                 dragStep={1}
-                visibleSlides={slides}
                 infinite
                 isPlaying
             >
                 <div className="flexBox">
                     <Slider>
-                        {imagesSlider.map((imgSlide, index) => (
-                            <Slide index={index} key={imgSlide}>
+                        {slides.map((imgSlide, index) => (
+                            <Slide index={index} key={imgSlide.id}>
                                 <Image
-                                    src={imgSlide}
+                                    src={`${process.env.REACT_APP_BACKEND}${imgSlide.image.url}`}
                                     alt=""
                                     className="imageSlide"
-                                    // imageClassName="imgSlide"
-                                    onClick={(e) => console.log(e)}
                                 />
                             </Slide>
                         ))}

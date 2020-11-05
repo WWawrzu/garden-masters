@@ -12,12 +12,17 @@ function Social(props) {
                 <a
                     href={"www.facebook.com/GardenMaster-158136844781849"}
                     target="_blank"
+                    rel="noopener noreferrer"
                 >
                     <FontAwesomeIcon icon={faInstagram} />
                 </a>
             </div>
             <div className="fb">
-                <a href={"www.instagram.com/garden.master"} target="_blank">
+                <a
+                    href={"www.instagram.com/garden.master"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     <FontAwesomeIcon icon={faFacebook} />
                 </a>
             </div>
@@ -25,6 +30,7 @@ function Social(props) {
                 <a
                     href={"www.pl.pinterest.com/gardenmasterpolska"}
                     target="_blank"
+                    rel="noopener noreferrer"
                 >
                     <FontAwesomeIcon icon={faPinterest} />
                 </a>
