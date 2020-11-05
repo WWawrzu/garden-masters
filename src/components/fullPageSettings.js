@@ -8,7 +8,7 @@ export default {
     responsiveHeight: 900,
     responsiveWidth: 1300,
     scrollOverflow: true,
-    scrollOverflowOptions: true,
+    // scrollOverflowOptions: true,
     lazyLoading: true,
     scrollOverflowOptions: { disablePointer: true },
     licenseKey:

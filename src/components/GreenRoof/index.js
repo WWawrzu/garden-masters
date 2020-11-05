@@ -3,16 +3,10 @@ import Footer from "../Footer";
 import "./style.scss";
 import ReactFullpage from "@fullpage/react-fullpage";
 import fullPageSettings from "../fullPageSettings";
-import GoogleMapReact from "google-map-react";
-import {
-    faExternalLinkAlt,
-    faFileDownload,
-} from "@fortawesome/free-solid-svg-icons";
-import StyledButton from "../StyledButton/Ofert/index";
+import { faFileDownload } from "@fortawesome/free-solid-svg-icons";
+import StyledButton from "../StyledButton/index";
 
 function GreenRoof(props) {
-    const cords = { lat: 50.0448998, lng: 19.9633123 };
-
     return (
         <ReactFullpage
             {...fullPageSettings}

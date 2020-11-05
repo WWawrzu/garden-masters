@@ -39,7 +39,10 @@ function Realizations(props) {
                             <div className="flex">
                                 <div className="grid">
                                     {subSites.map((tile) => (
-                                        <Link to={`${match.url}/${tile.url}`}>
+                                        <Link
+                                            to={`${match.url}/${tile.url}`}
+                                            key={tile.url}
+                                        >
                                             <div className="tiles">
                                                 <img src={tile.image} alt="" />
                                                 <div className="title">
