@@ -3,11 +3,11 @@ import axios from "axios";
 import "./style.scss";
 import MainAbout from "./MainAbout";
 import MainHeader from "./MainHeader";
-import MainSlider from "./MainSlider";
+import MainSlider from "../MainSlider";
 import MainSocial from "./MainSocial";
 import ReactFullpage from "@fullpage/react-fullpage";
-import Footer from "../Footer";
 import fullPageSettings from "../fullPageSettings";
+import Footer from "../Footer";
 import LoadingScrenn from "../LoadingScrenn";
 
 class About extends Component {
