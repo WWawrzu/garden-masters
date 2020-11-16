@@ -5,7 +5,9 @@ import PapperCard from "../PapperCard/index";
 import LoadingScrenn from "../LoadingScrenn";
 import "./style.scss";
 import StyledSlider from "../StyledSlider";
-
+import MainSlider from "../MainSlider";
+import ReactFullpage from "@fullpage/react-fullpage";
+import fullPageSettings from "../fullPageSettings";
 class Workmenship extends Component {
     constructor(props) {
         super(props);
@@ -33,11 +35,28 @@ class Workmenship extends Component {
         if (!this.state.loaded) return <LoadingScrenn />;
         else
             return (
-                <div>
+                <div className="section fp-auto-height-responsive">
                     <div className="bgNR sub realizacjeSub">
                         <div className="conSub conBig">
                             <h1 className="">wykonawstwo</h1>
-                            <StyledSlider slides={slides} />
+                            {/* <StyledSlider slides={slides} /> */}
+                            <ReactFullpage
+                                {...fullPageSettings}
+                                responsiveHeight={4000}
+                                responsiveWidth={4000}
+                                render={({ state, fullpageApi }) => {
+                                    return (
+                                        <ReactFullpage.Wrapper>
+                                            <MainSlider
+                                                // className="section"
+                                                slides={slides}
+                                                fullpageApi={fullpageApi}
+                                            />
+                                        </ReactFullpage.Wrapper>
+                                    );
+                                }}
+                            />
+
                             <p>Wybrane z ostatnich lat</p>
                             <div className="twoColumns">
                                 {lists.map(({ title, list }) => (
