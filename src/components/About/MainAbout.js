@@ -12,7 +12,7 @@ function MainAbout({ style, text }) {
                 <div className="logo">
                     <img
                         src={require("../../assets/logo.jpg")}
-                        alt="logo Garden Masters"
+                        alt="logo Garden Master"
                     />
                 </div>
             </div>

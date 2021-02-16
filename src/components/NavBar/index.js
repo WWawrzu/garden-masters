@@ -26,7 +26,7 @@ function NavBar(props) {
             <div className="bar">
                 <img
                     src={require("../../assets/logo GM v5.png")}
-                    alt="logo Garden Masters"
+                    alt="logo Garden Master"
                 />
                 <div className="navSection">
                     {links.map((link) => {

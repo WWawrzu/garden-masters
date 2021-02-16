@@ -34,7 +34,7 @@ class Contact extends Component {
                                         <div className="left">
                                             <h1>Kontakt</h1>
                                             <div className="marg">
-                                                <h2>Garden Masters</h2>
+                                                <h2>Garden Master</h2>
                                                 <div className="conBlock">
                                                     spółka z o.o. spółka
                                                     komandytowa

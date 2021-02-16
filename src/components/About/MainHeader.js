@@ -19,7 +19,7 @@ const MainHeader = React.forwardRef(({ fullpageApi }, ref) => (
         >
             <img
                 src={require("../../assets/logo.jpg")}
-                alt="logo Garden Masters"
+                alt="logo Garden Master"
             />
             <div
                 className="scroll"
