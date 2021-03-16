@@ -1,25 +1,11 @@
 @import "../../styles/imports";
-.bgNR {
-    background-image: url("../../assets/bgStriped.png");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    @media (max-width: $small) {
-        background-image: none !important;
-    }
-}
-.bg {
-    background-image: url("../../assets/bgStriped.png");
-    background-size: cover;
-    @media (max-width: $small) {
-        background-image: none !important;
-    }
-}
+
 .Realizations {
     // min-height: 100vh;
     // display: flex;
     // flex-direction: column;
     .flex {
-        min-height: 100vh;
+        min-height: 65vh;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -29,8 +15,8 @@
     .grid {
         // padding-top: $bar;
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
         @media (max-width: $small) {
             // padding-top: $bar-s;
             margin-top: $bar;

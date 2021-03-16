@@ -1,7 +1,7 @@
 @import "../../styles/imports";
 // @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 .Navbar {
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     z-index: 1000;
@@ -10,16 +10,16 @@
     display: flex;
     flex-direction: column;
     .bar {
-        // height: 60px;
+        height: 100px;
         width: 100%;
         background-color: $primary;
-        color: $white;
+        color: $black;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 15px 120px 15px 60px;
+        padding: 15px 60px 15px 60px;
         img {
-            height: 35px;
+            height: 40px;
         }
 
         @media (max-width: $large) {
@@ -30,7 +30,7 @@
             width: 80%;
             max-width: 1050px;
             // opacity: 0.8;
-            justify-content: space-between;
+            justify-content: flex-end;
             // font-family: "Roboto";
             font-size: 16px;
             @media (max-width: $medium) {
@@ -42,11 +42,18 @@
         }
         .NavLink {
             text-transform: uppercase;
-            color: $white;
+            color: $black;
             text-decoration: none;
+            padding: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-left: 30px;
         }
         .NavLinkActive {
-            color: $secondary;
+            color: $white;
+            background-color: $third;
+            font-family: $segoe-bold;
+            border-radius: 28px;
             // text-decoration: underline;
         }
     }

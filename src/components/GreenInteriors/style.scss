@@ -4,14 +4,6 @@
 //     // display: none;
 // }
 .GreenInteriors {
-    .bgNR {
-        background-image: url("../../assets/bgStriped.png");
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        @media (max-width: $small) {
-            background-image: none !important;
-        }
-    }
     h1 {
         margin: 0;
     }

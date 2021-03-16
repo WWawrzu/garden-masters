@@ -32,11 +32,12 @@ class Ofert extends Component {
         return (
             <div className="Ofert bgNR section fp-auto-height fp-auto-height-responsive ">
                 <div className="container">
-                    <h1>Oferta</h1>
+                    {/* <h1>Oferta</h1>
                     <div className="block">
                         Nasza firma oferuje szeroki zakres usług związanych z
                         zakładaniem terenów zieleni.
-                    </div>
+                    </div> */}
+                    <PapperCard elements={list} title="Nasza oferta" />
                     <PapperCard
                         elements={list}
                         title="Oferta obejmuje między innymi"

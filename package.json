@@ -29,6 +29,7 @@
         "react-scripts": "3.4.3",
         "react-slick": "^0.27.11",
         "react-spring": "^8.0.27",
+        "segoe-fonts": "^1.0.1",
         "shortid": "^2.2.15",
         "slick-carousel": "^1.8.1",
         "smoothscroll-polyfill": "^0.4.4",

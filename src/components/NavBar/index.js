@@ -5,14 +5,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const links = [
-    { location: "/", label: "O Firmie" },
-    { location: "/realizacje", label: "Realizacje" },
+    { location: "/", label: "O Nas" },
+    { location: "/realizacje", label: "Współpraca i inwestycje" },
     { location: "/oferta", label: "Oferta" },
-    { location: "/zielen-we-wnetrzach", label: "Zieleń we wnętrzach" },
-    {
-        location: "/system-dachow-zielonych-grs",
-        label: "System dachów zielonych grs",
-    },
+    // { location: "/zielen-we-wnetrzach", label: "Kontakt" },
+    // {
+    //     location: "/system-dachow-zielonych-grs",
+    //     label: "System dachów zielonych grs",
+    // },
     { location: "/kontakt", label: "kontakt" },
 ];
 
@@ -25,7 +25,7 @@ function NavBar(props) {
         <div className="Navbar">
             <div className="bar">
                 <img
-                    src={require("../../assets/logo GM v5.png")}
+                    src={require("../../assets/logoIns.png")}
                     alt="logo Garden Master"
                 />
                 <div className="navSection">

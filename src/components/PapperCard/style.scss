@@ -3,8 +3,8 @@
     box-shadow: 5px 5px 10px #c2c2c2;
     max-width: 750px;
     margin: 0 auto;
-    border-radius: 12px;
-    background-color: $white;
+    // border-radius: 12px;
+    background-color: $secondary;
     @media (max-width: $small) {
         box-shadow: none;
         border-radius: none;
@@ -14,11 +14,11 @@
         max-width: 100%;
     }
     h2 {
-        font-family: "Arya", sans-serif;
+        font-family: $segoe;
         font-size: 40px;
         padding: 20px 30px;
         text-align: center;
-        color: $secondary;
+        color: $third;
         @media (max-width: $large) {
             font-size: 35px;
             text-align: left;

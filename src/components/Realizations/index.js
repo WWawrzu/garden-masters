@@ -8,24 +8,19 @@ import { Link, useRouteMatch } from "react-router-dom";
 function Realizations(props) {
     const subSites = [
         {
-            title: "Projekty",
+            title: "Nadzór inspektorski",
             image: require("../../assets/realizations/thumbnails/projekty.jpg"),
-            url: "projekty",
+            url: "nadzor",
         },
         {
-            title: "Wykonawstwo",
-            image: require("../../assets/realizations/thumbnails/wykonawstwo.jpeg"),
-            url: "wykonawstwo",
+            title: "Analizy ekologiczne",
+            image: require("../../assets/realizations/thumbnails/analiza.jpg"),
+            url: "analizy",
         },
         {
-            title: "Inwentaryzacje",
-            image: require("../../assets/realizations/thumbnails/inwentaryzacje.png"),
-            url: "inwentaryzacje",
-        },
-        {
-            title: "Analiza i Nadzór",
-            image: require("../../assets/realizations/thumbnails/analiza_nadzor.png"),
-            url: "analiza_i_nadzor",
+            title: "Szkolenia i audyty",
+            image: require("../../assets/realizations/thumbnails/szkolenia.jpg"),
+            url: "szkolenia",
         },
     ];
     let match = useRouteMatch();

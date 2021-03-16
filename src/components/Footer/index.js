@@ -1,6 +1,6 @@
 import React from "react";
 import shortid from "shortid";
-import Social from "../Social";
+// import Social from "../Social";
 import "./style.scss";
 
 function Footer(props) {
@@ -38,9 +38,9 @@ function Footer(props) {
                         ></div>
                     ))}
                 </div>
-                <Social />
+                {/* <Social /> */}
             </div>
-            <div className="lines"></div>
+            {/* <div className="lines"></div> */}
         </div>
     );
 }

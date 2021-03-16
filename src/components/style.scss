@@ -6,8 +6,8 @@ html {
 body {
     padding: 0;
     margin: 0;
-    font-family: "Roboto";
-    background-color: $white;
+    font-family: $segoe;
+    background-color: $primary;
     color: $black;
     overflow-x: hidden !important;
     font-size: 16px;
@@ -20,7 +20,7 @@ body {
 }
 h1 {
     color: $secondary;
-    font-family: "Arya", sans-serif;
+    font-family: $segoe-bold;
     font-size: 80px;
     // margin: 20px 0;
     text-transform: uppercase;
