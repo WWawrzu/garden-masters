@@ -38,9 +38,9 @@ class Workmenship extends Component {
                 <div className="section fp-auto-height-responsive">
                     <div className="bgNR sub realizacjeSub">
                         <div className="conSub conBig">
-                            <h1 className="">wykonawstwo</h1>
+                            {/* <h1 className="">wykonawstwo</h1> */}
                             {/* <StyledSlider slides={slides} /> */}
-                            <ReactFullpage
+                            {/* <ReactFullpage
                                 {...fullPageSettings}
                                 responsiveHeight={4000}
                                 responsiveWidth={4000}
@@ -55,9 +55,9 @@ class Workmenship extends Component {
                                         </ReactFullpage.Wrapper>
                                     );
                                 }}
-                            />
+                            /> */}
 
-                            <p>Wybrane z ostatnich lat</p>
+                            {/* <p>Wybrane z ostatnich lat</p> */}
                             <div className="twoColumns">
                                 {lists.map(({ title, list }) => (
                                     <PapperCard title={title} elements={list} />

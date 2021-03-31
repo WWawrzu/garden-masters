@@ -23,14 +23,11 @@ class About extends Component {
 
     componentDidMount = () => {
         Promise.all([
-            axios.get(`${process.env.REACT_APP_BACKEND}/main-slider`),
-            axios.get(`${process.env.REACT_APP_BACKEND}/o-firmie-tekst`),
-            axios.get(`${process.env.REACT_APP_BACKEND}/o-firmie-instagram`),
+            // axios.get(`${process.env.REACT_APP_BACKEND}/main-slider`),
+            // axios.get(`${process.env.REACT_APP_BACKEND}/o-firmie-tekst`),
+            // axios.get(`${process.env.REACT_APP_BACKEND}/o-firmie-instagram`),
         ]).then(([sliderResponse, textResponse, instagramResponse]) => {
             this.setState({
-                slides: sliderResponse.data.Slide,
-                mainText: textResponse.data,
-                instagramPosts: instagramResponse.data.instaposts,
                 loaded: true,
             });
         });
@@ -44,32 +41,40 @@ class About extends Component {
         if (!this.state.loaded) return <LoadingScrenn />;
         else
             return (
-                <ReactFullpage
-                    {...fullPageSettings}
-                    render={({ state, fullpageApi }) => {
-                        return (
-                            <div className="About">
-                                <ReactFullpage.Wrapper>
-                                    <MainHeader fullpageApi={fullpageApi} />
-                                    <MainAbout
-                                        className="section"
-                                        text={mainText}
-                                    />
-                                    <MainSlider
-                                        className="section"
-                                        slides={slides}
-                                        fullpageApi={fullpageApi}
-                                    />
-                                    <MainSocial
-                                        className="section"
-                                        instagramPosts={instagramPosts}
-                                    />
-                                    <Footer />
-                                </ReactFullpage.Wrapper>
+                <div className="About">
+                    <div className="section">
+                        <div className="slider"></div>
+                        <div className="text">
+                            <h1>INSPEKTOR NADZORU TERENOW ZIELENI</h1>
+                            <div className="desc">
+                                Jesteśmy grupą ekspertów w dziedzinie zieleni.
+                                Tworzymy zespół składający się z
+                                wykwalifikowanych ogrodników oraz architektów
+                                krajobrazu z ponad 30 letnim doświadczeniem w
+                                zakresie projektowania, budowy i pielęgnacji
+                                terenów zieleni. Członkowie naszej kadry są
+                                absolwentami Uniwersytetu Rolniczego w Krakowie
+                                i Politechniki Krakowskiej.
                             </div>
-                        );
-                    }}
-                />
+                        </div>
+                    </div>
+                    <div className="section">
+                        <div className="slider"></div>
+                        <div className="text">
+                            <div className="desc">
+                                Jesteśmy grupą ekspertów w dziedzinie zieleni.
+                                Tworzymy zespół składający się z
+                                wykwalifikowanych ogrodników oraz architektów
+                                krajobrazu z ponad 30 letnim doświadczeniem w
+                                zakresie projektowania, budowy i pielęgnacji
+                                terenów zieleni. Członkowie naszej kadry są
+                                absolwentami Uniwersytetu Rolniczego w Krakowie
+                                i Politechniki Krakowskiej.
+                            </div>
+                        </div>
+                    </div>
+                    <Footer />
+                </div>
             );
     }
 }

@@ -27,27 +27,18 @@ function App() {
                     <Route exact path="/oferta">
                         <Ofert />
                     </Route>
-                    {/* <Route exact path="/zielen-we-wnetrzach">
-                        <GreenInteriors />
-                    </Route>
-                    <Route exact path="/system-dachow-zielonych-grs">
-                        <GreenRoof />
-                    </Route> */}
                     <Route exact path="/kontakt">
                         <Contact />
                     </Route>
-                    {/* <Route exact path="/realizacje/projekty">
-                        <Projects />
-                    </Route>
-                    <Route exact path="/realizacje/wykonawstwo">
-                        <Workmenship />
-                    </Route>
-                    <Route exact path="/realizacje/inwentaryzacje">
-                        <Inventory />
-                    </Route>
-                    <Route exact path="/realizacje/analiza_i_nadzor">
+                    <Route exact path="/realizacje/nadzor">
                         <Supervision />
-                    </Route> */}
+                    </Route>
+                    <Route exact path="/realizacje/analizy">
+                        <Supervision />
+                    </Route>
+                    <Route exact path="/realizacje/szkolenia">
+                        <Supervision />
+                    </Route>
                 </Switch>
             </Router>
         </div>

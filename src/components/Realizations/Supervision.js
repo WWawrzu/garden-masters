@@ -30,7 +30,7 @@ class Supervision extends Component {
                 <div>
                     <div className="bgNR sub realizacjeSub">
                         <div className="conSub conCenter">
-                            <h1 className="">Projekty</h1>
+                            {/* <h1 className="">Projekty</h1> */}
                             {lists.map(({ title, list }) => (
                                 <PapperCard title={title} elements={list} />
                             ))}

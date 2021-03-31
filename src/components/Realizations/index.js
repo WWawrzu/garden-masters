@@ -25,35 +25,29 @@ function Realizations(props) {
     ];
     let match = useRouteMatch();
     return (
-        <ReactFullpage
-            {...fullPageSettings}
-            render={({ state, fullpageApi }) => {
-                return (
-                    <ReactFullpage.Wrapper>
-                        <div className="Realizations bg section fp-auto-height-responsive">
-                            <div className="flex">
-                                <div className="grid">
-                                    {subSites.map((tile) => (
-                                        <Link
-                                            to={`${match.url}/${tile.url}`}
-                                            key={tile.url}
-                                        >
-                                            <div className="tiles">
-                                                <img src={tile.image} alt="" />
-                                                <div className="title">
-                                                    <h2>{tile.title}</h2>
-                                                </div>
-                                            </div>
-                                        </Link>
-                                    ))}
+        <>
+            <div className="Realizations bg section fp-auto-height-responsive">
+                <div className="flex">
+                    <div className="grid">
+                        {subSites.map((tile) => (
+                            <Link
+                                to={`${match.url}/${tile.url}`}
+                                key={tile.url}
+                                className="tiles"
+                            >
+                                <div>
+                                    <img src={tile.image} alt="" />
+                                    <div className="title">
+                                        <h2>{tile.title}</h2>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <Footer />
-                    </ReactFullpage.Wrapper>
-                );
-            }}
-        />
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+            </div>
+            <Footer />
+        </>
     );
 }
 
