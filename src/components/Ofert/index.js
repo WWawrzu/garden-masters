@@ -37,10 +37,13 @@ class Ofert extends Component {
                         Nasza firma oferuje szeroki zakres usług związanych z
                         zakładaniem terenów zieleni.
                     </div> */}
-                    <PapperCard elements={list} title="Nasza oferta" />
                     <PapperCard
                         elements={list}
-                        title="Oferta obejmuje między innymi"
+                        title="Nasza oferta skierowana jest do:"
+                    />
+                    <PapperCard
+                        elements={list}
+                        title="Oferta obejmuje między innymi:"
                     />
                     <div className="block brandP">
                         Współpracujemy z takimi Generalnymi Wykonawcami jak:

@@ -17,9 +17,11 @@
         // grid-gap: 20px;
         @media (max-width: $medium) {
             grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
         }
         @media (max-width: $small) {
             grid-template-columns: 1fr;
+            grid-gap: 20px;
         }
     }
     .block {

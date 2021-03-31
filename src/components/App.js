@@ -27,16 +27,16 @@ function App() {
                     <Route exact path="/oferta">
                         <Ofert />
                     </Route>
-                    <Route exact path="/zielen-we-wnetrzach">
+                    {/* <Route exact path="/zielen-we-wnetrzach">
                         <GreenInteriors />
                     </Route>
                     <Route exact path="/system-dachow-zielonych-grs">
                         <GreenRoof />
-                    </Route>
+                    </Route> */}
                     <Route exact path="/kontakt">
                         <Contact />
                     </Route>
-                    <Route exact path="/realizacje/projekty">
+                    {/* <Route exact path="/realizacje/projekty">
                         <Projects />
                     </Route>
                     <Route exact path="/realizacje/wykonawstwo">
@@ -47,7 +47,7 @@ function App() {
                     </Route>
                     <Route exact path="/realizacje/analiza_i_nadzor">
                         <Supervision />
-                    </Route>
+                    </Route> */}
                 </Switch>
             </Router>
         </div>

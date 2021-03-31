@@ -17,7 +17,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 15px 60px 15px 60px;
+        padding: 15px 50px 15px 60px;
         img {
             height: 40px;
         }
@@ -54,6 +54,7 @@
             background-color: $third;
             font-family: $segoe-bold;
             border-radius: 28px;
+            transition: 0.3s;
             // text-decoration: underline;
         }
     }
@@ -65,7 +66,7 @@
         }
         .icon {
             font-size: 30px;
-            color: $secondary;
+            color: $third;
         }
     }
     .mobileMenu {
@@ -83,13 +84,14 @@
         -webkit-backdrop-filter: blur(5px);
         backdrop-filter: blur(5px);
         transition: all 0.4s ease-in-out;
+
         .navSection {
             display: flex;
             flex-direction: column;
             align-items: center;
             font-size: 18px;
             padding: 0px 0;
-            background-color: rgba($white, 0.7);
+            //background-color: rgba($white, 0.7);
             -webkit-backdrop-filter: blur(40px);
             backdrop-filter: blur(40px);
         }
@@ -100,7 +102,7 @@
             padding: 10px 0;
             text-align: center;
             width: 100%;
-            border-bottom: 1px solid rgba($black, 0.2);
+            //border-bottom: 1px solid rgba($black, 0.2);
         }
         .NavLinkActive {
             color: #3f8308;
